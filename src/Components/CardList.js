@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import RetreatCard from './RetreatCard';
 import { data } from '../utils/data';
 import Slider from 'react-slick';
@@ -6,6 +6,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CardList = () => {
+  const[filteredData, setFilteredData] = useState(data);
+  const[yearFilter, setYearFilter] = useState('');
+  const[typeFilter, setTypeFilter] = useState('');
   
   const sliderRef = useRef(null);
   
@@ -20,6 +23,42 @@ const CardList = () => {
       sliderRef.current.slickPrev();
     }
   };
+
+  useEffect(() => {
+    let filtered = data;
+    if(yearFilter) {
+      const filteredData = data.filter(item => {
+        const itemYear = new Date(item.date*1000).getFullYear();
+        return itemYear.toString() === yearFilter;
+      });
+      setFilteredData(filteredData);
+    }
+    else 
+    {
+      setFilteredData(data);
+    }
+
+    if(typeFilter > 0) {
+      filtered = filtered.filter(item => {
+        typeFilter.every(tag => item.tag.includes(tag))
+      })
+    }
+  }, [yearFilter, typeFilter]);
+
+  const handleYearChange = (e) => {
+    setYearFilter(e.target.value);
+  }
+
+  const handleTypeChange = (tag) => {
+    setTypeFilter(prev => {
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev,tag]
+    })
+  }
+
+  const uniqueYears = [...new Set(data.map(item => 
+    new Date(item.date * 1000).getFullYear()))].sort((a,b) => b-a);
+
+  const allTypes = [...new Set(data.flatMap(item => item.tag))];
 
   const settings = {
     dots: false,
@@ -47,9 +86,31 @@ const CardList = () => {
   };
 
   return (
-    <div className='gap-12'>
+    <div className=''>
+      <div>
+      <select 
+          value={yearFilter} 
+          onChange={handleYearChange}
+          className="m-2 p-2 border rounded bg-headerbg"
+        >
+          <option value="">All Dates</option>
+          {uniqueYears.map(date => (
+            <option key={date} value={date}>{date}</option>
+          ))}
+        </select>
+        <select 
+          value={typeFilter} 
+          onChange={handleTypeChange}
+          className="m-2 p-2 border rounded bg-headerbg"
+        >
+          <option value="">All Types</option>
+          {allTypes.map(tag => (
+            <option key={tag} value={tag}>{tag}</option>
+          ))}
+        </select>
+      </div>
       <Slider ref={sliderRef} {...settings}>
-        {data.map((item) => (
+        {filteredData.map((item) => (
           <RetreatCard
             key={item.id}
             title={item.title}
