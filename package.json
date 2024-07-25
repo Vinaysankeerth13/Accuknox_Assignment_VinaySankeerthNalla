@@ -1,0 +1,28 @@
+{
+  "name": "frontend-assignmnet-shoonya",
+  "version": "1.0.0",
+  "description": "This is a wellness retreat landing page that I am making for an assignment at Shoonya",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinaysankeerth13/VinaySankeerthNalla_Shoonya_Assignment.git"
+  },
+  "author": "Vinay Sankeerth Nalla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vinaysankeerth13/VinaySankeerthNalla_Shoonya_Assignment/issues"
+  },
+  "homepage": "https://github.com/Vinaysankeerth13/VinaySankeerthNalla_Shoonya_Assignment#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
