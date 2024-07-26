@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const CardList = () => {
-  
   const [filteredData, setFilteredData] = useState(data);
   const [yearFilter, setYearFilter] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
@@ -60,7 +59,9 @@ const CardList = () => {
   const handleCurrencyChange = (e) => setCurrency(e.target.value);
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
 
-  const uniqueYears = [...new Set(data.map((item) => new Date(item.date * 1000).getFullYear()))].sort((a, b) => b - a);
+  const uniqueYears = [
+    ...new Set(data.map((item) => new Date(item.date * 1000).getFullYear())),
+  ].sort((a, b) => b - a);
   const allTypes = [...new Set(data.flatMap((item) => item.tag))];
 
   const settings = {

@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './src/components/Header';
-import Body from './src/Components/Body';
+import React from "react";
+import ReactDOM from "react-dom";
+import Header from "./src/Components/Header";
+import Body from "./src/Components/Body";
 
 function App() {
   return (
     <div>
-    <Header />
-    <Body/>
+      <Header />
+      <Body />
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
