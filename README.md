@@ -44,3 +44,7 @@ For any other issues, please open an issue in the GitHub repository.
   - **Currency**: Filter to accommodate customers from different countries.
 - **Search**: A basic search functionality that enables users to search for the retreat they wish to choose.
 - **Scroll Functionality**: Implemented using "Previous" and "Next" buttons to enable users to scroll through retreat options.
+
+## Design Changes
+
+I revised the design of the site as the initial design was not aesthetically pleasing for a wellness retreat website. The initial design had too many colors. Additionally, I added a filter that changes the currency, enabling the website to cater to a broader customer base.
