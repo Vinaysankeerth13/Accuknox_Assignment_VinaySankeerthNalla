@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         myFont: ['Oswald'],
       },
+      width:{
+        widgetWidth: '466px',
+      },
       colors:{
         headerbg: '#D6EFD8',
         headertext: '#1A5319'

@@ -1,14 +1,21 @@
 import React from "react";
-import MainBanner from "./MainBanner";
-import CardList from "./CardList";
+import Widget from "./Widget";
 
 const Body = () => {
   return (
-    <div className="mt-1 mb-2 m-5 p-5 drop-shadow-2xl file ">
-      <MainBanner />
-      <CardList />
+    <div className="mt-1 mb-2 m-1 p-1 bg-white flex flex-wrap">
+      <Widget/>
+      <Widget/>
+      <Widget/>
+      <Widget/>
+      <Widget/>
+      <Widget/>
+      <Widget/>
     </div>
   );
 };
 
 export default Body;
+
+
+

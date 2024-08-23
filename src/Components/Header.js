@@ -1,12 +1,10 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({searchTerm, onSearchChange}) => {
   return (
     <header>
-      <div className="flex items-center justify-center bg-headerbg text-headertext p-3 drop-shadow-lg">
-        <h1 className="text-4xl text-center drop-shadow-2xl green-shadow font-myFont">
-          Wellness Retreat
-        </h1>
+      <div className="flex items-center justify-center bg-white p-2 drop-shadow-lg">
+      <input type="text" placeholder="Search anything" value={searchTerm} onChange={onSearchChange} className="p-1 m-1 outline-black-100 font-light"/>
       </div>
     </header>
   );
