@@ -1,6 +1,6 @@
-# Shoonya Life Assignment Website
+# Accuknox Dashboard Assignment
 
-This is a website I built as part of an assignment for Shoonya Life.
+This is a website I built as part of an assignment for Accuknox.
 
 # How to Run This Project
 

@@ -6,7 +6,6 @@ import Body from "./src/Components/Body";
 function App() {
   return (
     <div>
-      <Header />
       <Body />
     </div>
   );

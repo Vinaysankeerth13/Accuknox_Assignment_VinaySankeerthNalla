@@ -21,6 +21,15 @@ const data = {
             "text": "Widget 2 text",
             "chartData": [30, 70]
           }
+        },
+        {
+          "id": 103,
+          "name": "Widget 3",
+          "type": "progress",
+          "data": {
+            "text": "Widget 3 text",
+            "progress": 70
+          }
         }
       ]
     },
