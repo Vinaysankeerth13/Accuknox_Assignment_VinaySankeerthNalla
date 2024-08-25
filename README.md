@@ -1,6 +1,6 @@
 # Accuknox Dashboard Assignment
 
-This is a website I built as part of an assignment for Accuknox.
+This is a website (Analytics Dashboard) I built as part of an assignment for Accuknox.
 
 # How to Run This Project
 
@@ -13,8 +13,8 @@ This project is a React application built using Parcel as the bundler. Follow th
 
 ## Steps
 
-1. Clone the repository: git clone [https://github.com/Vinaysankeerth13/VinaySankeerthNalla_Shoonya_Assignment]
-2. Navigate to the project directory: cd[VinaySankeerthNalla_Shoonya_Assignment]
+1. Clone the repository: git clone [https://github.com/Vinaysankeerth13/Accuknox_Assignment_VinaySankeerthNalla]
+2. Navigate to the project directory: cd[Accuknox_Assignment_VinaySankeerthNalla]
 3. Install the dependencies: npm install
 4. Start the development server: npm start
 5. Open your web browser and go to `http://localhost:1234` (or whichever port Parcel uses by default).
@@ -34,17 +34,11 @@ If you encounter any problems:
 
 For any other issues, please open an issue in the GitHub repository.
 
-## Features
+## Task Performed
 
-- **Header**: A simple header with title text.
-- **Main Banner**: Displayed only on large screens.
-- **Filters**: Three filters are incorporated:
-  - **Year**: Filter for the year the retreat event is happening.
-  - **Type of Event**: Filter for event types (Yoga, meditation, etc.).
-  - **Currency**: Filter to accommodate customers from different countries.
-- **Search**: A basic search functionality that enables users to search for the retreat they wish to choose.
-- **Scroll Functionality**: Implemented using "Previous" and "Next" buttons to enable users to scroll through retreat options.
-
-## Design Changes
-git 
-I revised the design of the site as the initial design was not aesthetically pleasing for a wellness retreat website. The initial design had too many colors. Additionally, I added a filter that changes the currency, enabling the website to cater to a broader customer base.
+1. **Dynamic JSON Structure**: Categories and widgets are loaded from a JSON file.
+2. **Dynamic Widget Addition**: Users can add widgets to a category via a popup form.
+3. **Random Text for Widgets**: Widgets are created with random progress values and placeholder text.
+4. **Widget Addition Form**: A form appears to enter widget name and text when adding a widget.
+5. **Remove Widget**: Widgets can be removed from a category using a delete button.
+6. **Search Widgets**: A search input filters widgets by name and updates displayed categories accordingly.
